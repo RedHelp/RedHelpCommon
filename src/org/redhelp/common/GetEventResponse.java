@@ -9,7 +9,7 @@ public class GetEventResponse implements Serializable{
 
    //System related fields 
     private Long e_id;
-    private Date creation_datetime;
+    private String creation_datetime;
     private boolean active;
     
     // Event related fields
@@ -39,11 +39,11 @@ public class GetEventResponse implements Serializable{
         this.e_id = e_id;
     }
 
-    public Date getCreation_datetime() {
+    public String getCreation_datetime() {
         return creation_datetime;
     }
 
-    public void setCreation_datetime(Date creation_datetime) {
+    public void setCreation_datetime(String creation_datetime) {
         this.creation_datetime = creation_datetime;
     }
 

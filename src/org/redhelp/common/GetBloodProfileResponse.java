@@ -2,9 +2,9 @@ package org.redhelp.common;
 
 import java.util.Date;
 import java.util.LinkedList;
+import java.util.SortedSet;
 
 import org.redhelp.common.types.BloodGroupType;
-import org.redhelp.common.types.BloodRequestType;
 import org.redhelp.common.types.Gender;
 import org.redhelp.common.types.GetBloodProfileType;
 
@@ -15,6 +15,7 @@ public class GetBloodProfileResponse {
     private String name;
     private String email;
     private String phone_number;
+    private byte[] user_image;
     private Double last_known_location_lat;
     private Double last_known_location_long;
     private Date last_known_location_datetime;
@@ -22,8 +23,9 @@ public class GetBloodProfileResponse {
     private BloodGroupType blood_group_type;
     private String city;
     private Date birth_date;
-    private LinkedList<BloodRequestType> blood_requests;
     private GetBloodProfileType response_type;
+    private LinkedList<GetBloodRequestResponse> blood_requests;
+    private LinkedList<GetEventResponse> event_response;
     
     
     public String getName() {
@@ -93,10 +95,10 @@ public class GetBloodProfileResponse {
     public void setBirth_date(Date birth_date) {
         this.birth_date = birth_date;
     }
-    public LinkedList<BloodRequestType> getBlood_requests() {
+    public LinkedList<GetBloodRequestResponse> getBlood_requests() {
         return blood_requests;
     }
-    public void setBlood_requests(LinkedList<BloodRequestType> blood_requests) {
+    public void setBlood_requests(LinkedList<GetBloodRequestResponse> blood_requests) {
         this.blood_requests = blood_requests;
     }
     public GetBloodProfileType getResponse_type() {
@@ -112,6 +114,18 @@ public class GetBloodProfileResponse {
 	        + last_known_location_long + ", last_known_location_datetime=" + last_known_location_datetime
 	        + ", gender=" + gender + ", blood_group_type=" + blood_group_type + ", city=" + city + ", birth_date="
 	        + birth_date + ", blood_requests=" + blood_requests + "]";
+    }
+    public byte[] getUser_image() {
+	return user_image;
+    }
+    public void setUser_image(byte[] user_image) {
+	this.user_image = user_image;
+    }
+    public LinkedList<GetEventResponse> getEvent_response() {
+	return event_response;
+    }
+    public void setEvent_response(LinkedList<GetEventResponse> event_response) {
+	this.event_response = event_response;
     }
     
 }

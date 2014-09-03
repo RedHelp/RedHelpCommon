@@ -7,7 +7,9 @@ import org.redhelp.common.types.SearchItemTypes;
 import org.redhelp.common.types.SearchRequestType;
 
 public class SearchRequest {
-
+    
+    private Long b_p_id;
+    private boolean require_user_location;
     private Location southWestLocation;
     private Location northEastLocation;
     private Location cameraPositionLocation;  
@@ -18,6 +20,24 @@ public class SearchRequest {
     private SearchRequestType searchRequestType;
     
     private Set<SearchItemTypes> searchItems;
+
+    
+    
+    public Long getB_p_id() {
+        return b_p_id;
+    }
+
+    public void setB_p_id(Long b_p_id) {
+        this.b_p_id = b_p_id;
+    }
+
+    public boolean isRequire_user_location() {
+        return require_user_location;
+    }
+
+    public void setRequire_user_location(boolean require_user_location) {
+        this.require_user_location = require_user_location;
+    }
 
     public Location getSouthWestLocation() {
         return southWestLocation;
