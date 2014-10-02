@@ -61,7 +61,7 @@ public class SlotsCommonFields implements Comparable<SlotsCommonFields>, Seriali
     }
     @Override
     public int compareTo(SlotsCommonFields that) {
-	return (this.start_datetime.compareTo(that.start_datetime) > 1) ? 1 : -1;
+	return this.start_datetime.compareTo(that.start_datetime);
     }
     public Long getS_id() {
 	return s_id;

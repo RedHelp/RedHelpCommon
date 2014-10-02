@@ -59,7 +59,7 @@ public class UserProfileCommonFields {
     @Override
     public String toString() {
 	return "UserProfileCommonFields [name=" + name + ", email=" + email + ", phone_number=" + phone_number
-	        + ", user_image=" + Arrays.toString(user_image) + "]";
+	        ;
     }
     public Boolean getIsRequestAccepted() {
 	return isRequestAccepted;

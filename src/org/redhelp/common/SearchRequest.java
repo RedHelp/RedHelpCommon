@@ -14,6 +14,7 @@ public class SearchRequest {
     private Location northEastLocation;
     private Location cameraPositionLocation;  
     private Location userCurrentLocation;
+    private String city;
     
     private Double radius;
     
@@ -21,8 +22,6 @@ public class SearchRequest {
     
     private Set<SearchItemTypes> searchItems;
 
-    
-    
     public Long getB_p_id() {
         return b_p_id;
     }
@@ -87,11 +86,14 @@ public class SearchRequest {
         this.searchItems = searchItems;
     }
 
+  
     @Override
     public String toString() {
-	return "SearchRequest [southWestLocation=" + southWestLocation + ", northEastLocation=" + northEastLocation
+	return "SearchRequest [b_p_id=" + b_p_id + ", require_user_location=" + require_user_location
+	        + ", southWestLocation=" + southWestLocation + ", northEastLocation=" + northEastLocation
 	        + ", cameraPositionLocation=" + cameraPositionLocation + ", userCurrentLocation=" + userCurrentLocation
-	        + ", radius=" + radius + ", searchItems=" + searchItems + "]";
+	        + ", city=" + city + ", radius=" + radius + ", searchRequestType=" + searchRequestType
+	        + ", searchItems=" + searchItems + "]";
     }
 
     public SearchRequestType getSearchRequestType() {
@@ -100,5 +102,13 @@ public class SearchRequest {
 
     public void setSearchRequestType(SearchRequestType searchRequestType) {
 	this.searchRequestType = searchRequestType;
+    }
+
+    public String getCity() {
+	return city;
+    }
+
+    public void setCity(String city) {
+	this.city = city;
     }   
 }

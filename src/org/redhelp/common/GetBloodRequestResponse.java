@@ -5,6 +5,7 @@ import java.util.Set;
 import org.redhelp.common.types.BloodGroupType;
 import org.redhelp.common.types.BloodRequestType;
 import org.redhelp.common.types.BloodRequirementType;
+import org.redhelp.common.types.UpdateBloodRequestState;
 
 public class GetBloodRequestResponse {
 
@@ -34,6 +35,7 @@ public class GetBloodRequestResponse {
     private String place_string;
     
     private BloodRequestType bloodRequestType;
+    private UpdateBloodRequestState bloodRequestState;
     
     public Long getB_r_id() {
         return b_r_id;
@@ -160,6 +162,12 @@ public class GetBloodRequestResponse {
     }
     public void setBloodRequestType(BloodRequestType bloodRequestType) {
 	this.bloodRequestType = bloodRequestType;
+    }
+    public UpdateBloodRequestState getBloodRequestState() {
+	return bloodRequestState;
+    }
+    public void setBloodRequestState(UpdateBloodRequestState bloodRequestState) {
+	this.bloodRequestState = bloodRequestState;
     }
     
     
